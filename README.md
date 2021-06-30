@@ -1,14 +1,12 @@
 # GGFastChemConverter
 A script to convert GGchem's output to FastChem's formatting in order to function with ktable and subsequently HELIOS.
 
-A short discription of how this code works:
-The differences between FastChem output and GGchem output are:
+A short discription of how this code works is that it takes all columns from the GGchem output that are relevant to ktable (the ones about temperature, pressure, hydrogen abundance, electron abundance, gas phase abundances and condensate abundances) and converts them to the way FastChem would. The differences between FastChem output and GGchem output are:
   1. For the abundances of the different (gas) species, FastChem uses mixing ratios relative to H, while GGchem uses abundances.
   2. GGchem outputs almost all columns in logarithmic10 units, while FastChem does not.
   3. Column labels (i.e. FastChem labels the column with pressure values as 'Pbar', while GGchem labels it as 'pgas').
   4. GGchem does not include a column with the mean molecular weights by default. In this readme, you'll learn how to incorporate this. This has to be done for ktable to run with GGchem.
   5. Column order (not a problem since ktable functions regardless of column order)
-
 
 The code therefore converts the first three points from GGchem's style to FastChem's style, independently of your chosen input parameters.
 
