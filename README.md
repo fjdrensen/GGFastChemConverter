@@ -28,3 +28,5 @@ Here follows a step-by-step of how to add mean molecular weight values to GGchem
      
      This will output mean molecular weight values in logarithmic10 values.
   4. Recompile the code and run ggchem with your input. You can now check if Static_Conc.dat actually has your mu/amu column, which should be the final column there.
+
+You can now use HELIOSGGchem.py to change this output to FastChem formatting by inputting the name of your output file (i.e. Static_Conc.dat) and your desired name for the output file (i.e. chemlow.dat or chemhigh.dat).
